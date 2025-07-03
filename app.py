@@ -21,6 +21,8 @@ def extract_text_from_pdf(file_path):
         text = page.extract_text()
     return text
 
+
+
 choice = st.sidebar.selectbox("Select your choice", ["Summarize Text", "Summarize Document","URL to Summarize"])
 
 if choice == "Summarize Text":
@@ -56,7 +58,8 @@ elif choice == "Summarize Document":
                 doc_summary = text_summary(text)
                 st.success(doc_summary)
               
-
+def author():
+    return "KERSTON ANTO SINGH A";
                 
 elif choice == "URL to Summarize":
     nltk.download('punkt')
